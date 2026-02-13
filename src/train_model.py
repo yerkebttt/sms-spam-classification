@@ -54,7 +54,7 @@ def evaluate_model(y_true, y_pred, model_name):
 evaluate_model(y_test, y_pred_nb, "Naive Bayes")
 evaluate_model(y_test, y_pred_lr, "Logistic Regression")
 
-# Сохраняем лучшую модель которая выигрывает
+# Сохраняем лучшую модель которая выигрывает 
 best_model = lr_model  # допустим LR лучше по метрикам
 joblib.dump(best_model, os.path.abspath(os.path.join(os.path.dirname(__file__), '../data/spam_model.pkl')))
 joblib.dump(vectorizer, os.path.abspath(os.path.join(os.path.dirname(__file__), '../data/vectorizer.pkl')))

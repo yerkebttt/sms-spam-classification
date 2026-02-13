@@ -15,11 +15,24 @@ def predict_message(message):
     prediction = model.predict(vec)[0]
     return "SPAM" if prediction == 1 else "HAM"
 
-# Примеры для определения
+# Примеры для определения 
+# Примеры для определения (более сложные)
 messages = [
     "Congratulations! You've won a $1000 gift card. Call now!",
     "Hey, are we still meeting for lunch today?",
-    "URGENT! Your account has been compromised. Reply immediately."
+    "URGENT! Your account has been compromised. Reply immediately.",
+    "Win a free vacation to Bahamas! Text WIN to 12345.",
+    "Can you send me the report by 5pm?",
+    "Get cheap meds online without prescription, limited offer!",
+    "LOL 😂 that meme you sent was hilarious!",
+    "You have an unpaid invoice. Pay immediately to avoid penalties.",
+    "Reminder: meeting with team tomorrow at 10am.",
+    "Exclusive deal for you: 50% off on all items today!",
+    "Are we still on for the movie night tonight?",
+    "Your phone number won a lottery! Claim prize now.",
+    "Hey, did you finish the homework?",
+    "Congratulations! Your credit card has been approved instantly.",
+    "Don't miss out! Earn $500 per day working from home."
 ]
 
 for msg in messages:

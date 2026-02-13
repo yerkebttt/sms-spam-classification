@@ -24,7 +24,7 @@ def clean_text(text):
 
 def preprocess_data(filepath):
    
-    # Detect if CSV has headers
+    # Detect if CSV has headers 
     with open(filepath, 'r', encoding='latin-1') as f:
         first_line = f.readline()
     
