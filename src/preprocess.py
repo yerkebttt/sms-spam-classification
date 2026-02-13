@@ -10,18 +10,12 @@ nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
 
-# Initialize lemmatizer and stopwords
+# Initialize lemmatizer and stopwords для ненужных
 lemmatizer = WordNetLemmatizer()
 stop_words = set(stopwords.words('english'))
 
 def clean_text(text):
-    """
-    Preprocess a text message:
-    - lowercase
-    - remove non-letter characters
-    - remove stopwords
-    - lemmatize
-    """
+
     text = str(text).lower()
     text = re.sub(r'[^a-z\s]', '', text)  # keep letters only
     tokens = text.split()
@@ -29,10 +23,7 @@ def clean_text(text):
     return " ".join(tokens)
 
 def preprocess_data(filepath):
-    """
-    Load SMS dataset, encode labels, and clean messages.
-    If file has no headers, add them automatically.
-    """
+   
     # Detect if CSV has headers
     with open(filepath, 'r', encoding='latin-1') as f:
         first_line = f.readline()

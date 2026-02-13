@@ -15,7 +15,7 @@ def predict_message(message):
     prediction = model.predict(vec)[0]
     return "SPAM" if prediction == 1 else "HAM"
 
-# Пример
+# Примеры для определения
 messages = [
     "Congratulations! You've won a $1000 gift card. Call now!",
     "Hey, are we still meeting for lunch today?",
